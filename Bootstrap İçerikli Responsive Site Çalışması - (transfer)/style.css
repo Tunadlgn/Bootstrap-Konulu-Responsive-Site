@@ -1,0 +1,490 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 6px;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400; 
+    line-height: 1.5; 
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: Montserrat;
+}
+
+/*Navbar*/
+
+nav {
+width: 100%; 
+position:fixed;
+font-family: Montserrat;
+background-color:#2c3e4f;
+color: #fff;
+padding-top:2rem;
+padding-bottom:2rem;
+z-index:500; 
+}
+
+/*Navbarın içindeki container*/
+
+
+.clearfix::after{ 
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container {
+    width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+
+#logobox {
+    float: left; 
+    padding-top: 0.5rem;
+}
+
+#logobox .logo {
+    color:#fff;
+    font-weight: 700;
+    font-size: 3.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#nav-links { /*Navbarın içindeki linkler*/
+    float: right;
+}
+
+#nav-links .navitem {
+    float: left;
+    margin: 0.5rem; 
+}
+
+
+#nav-links .navlink1 {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 700;
+    display: block;
+    padding: 1.6rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.4s; 
+}
+
+ul{
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+/*Navbarın içindeki içerikler*/
+
+.navicon{
+    display: none;
+}
+
+
+@media (max-width: 992px){
+    #logo-box{
+        float: none;
+        text-align: left;
+    }
+
+    #nav-links{
+        float:none;
+    }
+
+    #nav-links .nav-link {
+        font-size: 2rem;
+        padding-left: 0;
+    }
+    #nav-links .navitem{
+        float: none; 
+        text-align: left;
+    }
+    #nav-links .navicon{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        font-size: 3rem;
+    }
+
+}
+
+
+a {
+    text-decoration: none; 
+}
+
+#nav-links .navlink1:hover { 
+    color: #1abc9b;
+}
+
+/*Header Alanı*/
+
+header {
+    background-color: #1abc9b;
+    height: 700px; 
+    padding-top: calc(106px + 4rem); 
+    text-align: center;
+}
+
+img {
+    max-width: 256px;
+    height: auto;
+}
+
+header h1 {
+color: #fff;
+font-size: 6rem;
+text-transform: uppercase;
+}
+
+
+.star-light, .star-dark {
+    border: none;
+    border-top: 0.4rem solid #fff;
+    border-radius: 10px;
+    max-width: 25rem;
+    margin: 2.5rem auto;
+    overflow: visible; 
+}
+
+.star-light::after{
+    color:#fff;
+    background-color:#1abc9b;
+}
+
+.star-dark::after {
+    color:#2d3d4f;
+    background-color: #fff;
+}
+
+
+.star-light::after, .star-dark::after {
+    content:"\2605"; 
+    font-weight: 900;
+    font-size: 3.2rem;
+    position: relative;
+    top: -30px;
+    padding: 0 8px; 
+}
+
+
+header h2 {
+    color: #fff;
+    font-size: 2.2rem;
+    font-family: "Lato";
+    font-weight:300;
+}
+
+hr.star-light{
+    border-color: #fff;
+}
+
+hr.star-dark{
+    border-color: #2d3d4f;
+}
+
+
+section {
+    padding-top:10rem;
+    padding-bottom:10rem;
+    text-align: center;  
+}
+
+/*Portofolio Bölümü*/
+
+#portofolio {
+
+}
+
+#portofolio h2 {
+    font-size: 4.8rem;
+    color: #2d3d4f;
+}
+
+.img-fluid-p {
+    max-width:100%;
+    height: auto; 
+    
+}
+
+/*Portofolionun içindeki kolonlar*/
+
+.col {
+    float:left;
+    width: 100%; 
+    padding: 1rem; 
+}
+
+
+.portofolio-item {
+    position: relative; 
+}
+
+
+.portofolio-item img {
+    display:block; 
+    border-radius: 13px;
+}
+
+.img-overlay {
+    position:absolute;
+    top:0; 
+    left:0px;
+    height: 100%;
+    width: 100%;
+    background-color: #1abc9b;
+    opacity:0;
+    transition: opacity 0.4s;
+}
+
+.img-overlay .icon {
+    color:#fff;
+    font-size:11rem;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.portofolio-item:hover .img-overlay { 
+    opacity: 0.8;
+    border-radius: 13px;
+}
+
+/*About bölümü*/
+
+#about {
+    background-color: #1abc9b;
+    color: #fff;
+    height: 650px;
+}
+
+#about h2 {
+    font-size: 4.8rem;
+}
+
+#about-text { 
+    text-align: left;
+}
+
+#about-text .left {
+    float: none;
+    width: 100%;
+    padding-right: 5px; 
+    padding-left:25px;
+}
+
+
+#about-text .right {
+    float: none;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 5px;
+}
+
+#about-text .text {
+    font-size: 2rem;
+}
+
+
+.btn {
+    margin-left: 300px; 
+    margin-top: 5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    border: 1px solid #fff;
+    border-radius: 0.4rem;
+    color:white;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn-outline {
+    color:#fff;
+    border-color: #fff;
+    background-color: transparent;
+    padding: 2.2rem 1.6rem; 
+}
+
+.btn-outline:hover {
+    color: #252129;
+    background-color: #fff;
+}
+
+.btn-primary {
+    padding: 1.7rem 2rem;
+    margin-top: 30px;
+    border-radius: 1.5rem;
+    border: 0.4px solid #1abc9b;
+    background-color: #1abc9b;
+    color: #fff;
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #189d82;
+}
+
+.container h2 {
+    font-size: 4.8rem;
+    color: #2c3e50;
+
+}
+
+#contact-form {
+    width: 70%;
+    margin: 0 auto; 
+    text-align: left;
+}
+
+.form-group {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+}
+
+.form-group input {
+    border: none;
+    width: 100%;
+    display: block;
+    font-size: 2.4rem;
+}
+
+.form-group textarea {
+    border-bottom: 0.5px solid #1abc9b;
+    width: 100%;
+    padding-top:4rem ;
+    margin-top:4rem ;
+    display: block;
+    font-size: 2.4rem;
+}
+
+.form-group input:focus {
+    outline: 0;
+}
+
+.form-group textarea:focus {
+    outline: 0;
+}
+
+/*Footer alanı buraya gelecek*/
+footer {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #2c3e4f;
+    color: white;
+    text-align: center;
+}
+
+footer h4 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+footer p {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+footer li {
+    display: inline-block; 
+}
+
+.ikon1{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0.5px solid black;
+    font-size: 2rem;
+    line-height: 2rem;
+    transition: all .5s;
+}
+
+.ikon1:hover{
+    color: white;
+    background-color: #2c3e4f;
+}
+
+/*Responsive Alanı*/
+
+
+@media (min-width:576px) { 
+    .container{
+        max-width: 540px;
+    }
+    html{
+        font-size: 7px; 
+    }
+} 
+
+@media (min-width:768px) {
+    .container{
+        max-width: 720px;
+    }
+    html{
+        font-size: 8px;
+    }
+    .col{
+        width: 50%;
+    }
+    .btn{
+        margin-left: -110px;
+    }
+}
+
+@media (min-width:992px) {
+    .container{
+        max-width: 960px;
+    }
+    html{
+        font-size: 9px;
+    }
+    .col{
+        width: 33.333%;
+    }
+    #about-text .left{
+        float: left;
+        width: 50%;
+        padding-right: 10px;
+        padding-left: 210px;
+    }
+    #about-text .right{
+        float: right;
+        width: 50%;
+        padding-right: 210px;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container{
+        max-width: 1140px;
+    }
+    html{
+        font-size: 10px;
+    }
+}
+
+
